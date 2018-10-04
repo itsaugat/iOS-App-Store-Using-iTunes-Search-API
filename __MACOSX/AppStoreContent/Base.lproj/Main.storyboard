@@ -78,6 +78,7 @@
                     </tableView>
                     <connections>
                         <outlet property="searchBar" destination="VVS-tH-UlZ" id="E43-hi-adA"/>
+                        <outlet property="tableView" destination="On2-vA-njY" id="Srq-hU-ONC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELm-x7-Ebv" userLabel="First Responder" sceneMemberID="firstResponder"/>

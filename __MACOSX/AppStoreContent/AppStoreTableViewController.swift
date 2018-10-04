@@ -27,6 +27,7 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
         
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
+        self.tableView.keyboardDismissMode = .onDrag
     }
     
     func fetchApps(searchText: String)
