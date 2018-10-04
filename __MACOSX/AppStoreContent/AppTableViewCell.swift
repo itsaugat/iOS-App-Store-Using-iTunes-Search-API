@@ -25,7 +25,7 @@ class AppTableViewCell: UITableViewCell {
     func updateUI()
     {
         appName.text = app.appName
-        sellerName.text = app.seller
+        sellerName.text = app.seller! + " (App)"
         let url = URL(string: app.image!)
         
         DispatchQueue.global().async {
