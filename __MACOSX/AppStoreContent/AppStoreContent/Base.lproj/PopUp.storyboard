@@ -13,7 +13,7 @@
         <!--Pop Up View Controller-->
         <scene sceneID="m0o-Lq-6vI">
             <objects>
-                <viewController storyboardIdentifier="popUpID" modalPresentationStyle="overCurrentContext" id="hB6-sm-kIJ" customClass="PopUpViewController" customModule="AppStoreContent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="popUpID" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="hB6-sm-kIJ" customClass="PopUpViewController" customModule="AppStoreContent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r0z-W2-VTb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
                                 <color key="backgroundColor" red="1" green="0.90246680752523423" blue="0.43290023910865116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.47459858425414364" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ndb-uI-2BH"/>
                     </view>
                     <connections>
@@ -99,7 +99,6 @@
                         <outlet property="closeBtn" destination="PPr-eT-HIa" id="4SZ-Wp-mYF"/>
                         <outlet property="compayLabel" destination="9RE-tz-cDc" id="uph-WR-1ZS"/>
                         <outlet property="genreLabel" destination="Lgx-Gp-ubJ" id="hw0-kV-aNX"/>
-                        <outlet property="popBGView" destination="r0z-W2-VTb" id="6bo-PA-URN"/>
                         <outlet property="popImage" destination="87Q-86-TUO" id="Ms0-75-HoF"/>
                         <outlet property="popView" destination="AMy-LG-vo9" id="Fpi-iI-OhT"/>
                         <outlet property="titleLabel" destination="5wl-0z-JD3" id="o3y-Fj-FEd"/>
