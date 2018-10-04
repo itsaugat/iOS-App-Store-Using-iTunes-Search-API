@@ -12,10 +12,10 @@ class AppTableViewCell: UITableViewCell {
 
 
     @IBOutlet weak var artworkImageView: UIImageView!
-    
     @IBOutlet weak var appName: UILabel!
     @IBOutlet weak var sellerName: UILabel!
     
+    //Update UI Components when appDetail object is set
     var app:AppDetail! {
     didSet{
         self.updateUI()

@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Model to map the Json Object
 struct AppDetail {
     
     var appName: String?

@@ -13,7 +13,10 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
     // Search Bar Controller
     @IBOutlet weak var searchBar: UISearchBar!
     
+    //AppDetail Object array
     var apps:[AppDetail]?
+    
+    //ApiController Object
     var api = ApiController()
     
     var isSearching = false
@@ -27,9 +30,12 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
         
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
+        
+        //Hide keyborad when drag on table view
         self.tableView.keyboardDismissMode = .onDrag
     }
     
+    //Fetch Data from API to the given string match
     func fetchApps(searchText: String)
     {
         let jsonUrl = AppStoreEndPoint.search(term: searchText)
@@ -90,15 +96,10 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
             apps?.removeAll()
             self.tableView.reloadData()
         } else {
-//            view.endEditing(true)
             apps?.removeAll()
             self.tableView.reloadData()
             fetchApps(searchText: searchText)
         }
     }
-    
-    
-    
-
 
 }

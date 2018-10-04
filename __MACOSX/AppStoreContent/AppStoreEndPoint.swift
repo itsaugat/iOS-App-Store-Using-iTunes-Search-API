@@ -16,7 +16,6 @@ enum AppStoreEndPoint
         var components = URLComponents(string: baseURL)!
         components.path = path
         components.queryItems = queryComponents
-        
         let url = components.url!
         return URLRequest(url: url)
     }
