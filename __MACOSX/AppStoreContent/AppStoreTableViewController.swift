@@ -25,12 +25,8 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        fetchApps()
-        
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
-//        searchBar.text = "Hello world"
-        print("Hello world")
     }
     
     func fetchApps(searchText: String)
@@ -39,7 +35,6 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
         let url = jsonUrl.request.url
         api.getJsonFromUrl(url: url!) { (apps) in
             self.apps = apps
-            print(self.apps!)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -49,7 +44,6 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
 
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -77,17 +71,13 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
         
         //getting the index path of selected row
         let indexPath = tableView.indexPathForSelectedRow
-        
-        //getting the current cell from the index path
-        let currentCell = tableView.cellForRow(at: indexPath!)! as! AppTableViewCell
-        
-        let currentItem = currentCell.sellerName.text
-        
-        print(currentItem!)
-        
+       
+        //Use the new StoryBoard as the pop over view
         let sb = UIStoryboard(name: "PopUp", bundle: nil)
         let popup = sb.instantiateInitialViewController() as! PopUpViewController
+        //get the app data of the selected index
         popup.appData = apps?[(indexPath?.row)!]
+        //View the pop over
         self.present(popup, animated: true)
         
     }
@@ -96,16 +86,13 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchBar.text == nil || searchBar.text == "" {
-            isSearching = false
-            view.endEditing(true)
             apps?.removeAll()
-
+            self.tableView.reloadData()
         } else {
-            isSearching = true
+//            view.endEditing(true)
             apps?.removeAll()
-            let searchText = searchBar.text
-            fetchApps(searchText: searchText!)
-
+            self.tableView.reloadData()
+            fetchApps(searchText: searchText)
         }
     }
     
