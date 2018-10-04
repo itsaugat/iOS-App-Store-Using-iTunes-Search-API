@@ -14,13 +14,16 @@ struct AppDetail {
     var genre: String?
     var seller: String?
     var image: String?
+    var formattedPrice: String?
     
-    init(appName: String?, genre: String?, seller: String?, image: String?) {
+    init(appName: String?, genre: String?, seller: String?, image: String?, price: String?) {
         
         self.appName = appName
         self.genre = genre
         self.seller = seller
         self.image = image
+        self.formattedPrice = price
+        
         
     }
 }

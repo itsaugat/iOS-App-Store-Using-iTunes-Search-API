@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84863D972165E94C00EEC036 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84863D962165E94C00EEC036 /* PopUpViewController.swift */; };
+		84F6F3D32165F57A00FB2D00 /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F6F3D12165F57A00FB2D00 /* PopUp.storyboard */; };
 		928850D121636B90009EDC66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928850D021636B90009EDC66 /* AppDelegate.swift */; };
 		928850D621636B90009EDC66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928850D421636B90009EDC66 /* Main.storyboard */; };
 		928850D921636B90009EDC66 /* AppStoreContent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 928850D721636B90009EDC66 /* AppStoreContent.xcdatamodeld */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84863D962165E94C00EEC036 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		84F6F3D22165F57A00FB2D00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AppStoreContent/Base.lproj/PopUp.storyboard; sourceTree = "<group>"; };
 		928850CD21636B90009EDC66 /* AppStoreContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928850D021636B90009EDC66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928850D521636B90009EDC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			children = (
 				928850EB216391AC009EDC66 /* AppStoreTableViewController.swift */,
 				928850EF21639260009EDC66 /* APIController.swift */,
+				84863D962165E94C00EEC036 /* PopUpViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				928850E921638F4E009EDC66 /* AppTableViewCell.swift */,
+				84F6F3D12165F57A00FB2D00 /* PopUp.storyboard */,
 				928850D421636B90009EDC66 /* Main.storyboard */,
 				928850DC21636B90009EDC66 /* LaunchScreen.storyboard */,
 			);
@@ -165,6 +171,7 @@
 				928850DE21636B90009EDC66 /* LaunchScreen.storyboard in Resources */,
 				928850DB21636B90009EDC66 /* Assets.xcassets in Resources */,
 				928850D621636B90009EDC66 /* Main.storyboard in Resources */,
+				84F6F3D32165F57A00FB2D00 /* PopUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,12 +189,21 @@
 				928850EA21638F4E009EDC66 /* AppTableViewCell.swift in Sources */,
 				928850E821636C93009EDC66 /* AppDetail.swift in Sources */,
 				928850D121636B90009EDC66 /* AppDelegate.swift in Sources */,
+				84863D972165E94C00EEC036 /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		84F6F3D12165F57A00FB2D00 /* PopUp.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F6F3D22165F57A00FB2D00 /* Base */,
+			);
+			name = PopUp.storyboard;
+			sourceTree = "<group>";
+		};
 		928850D421636B90009EDC66 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

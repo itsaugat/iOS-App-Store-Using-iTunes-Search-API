@@ -25,12 +25,12 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //fetchApps()
+//        fetchApps()
         
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
-        
-
+//        searchBar.text = "Hello world"
+        print("Hello world")
     }
     
     func fetchApps(searchText: String)
@@ -83,25 +83,18 @@ class AppStoreTableViewController: UITableViewController, UISearchBarDelegate {
         
         let currentItem = currentCell.sellerName.text
         
+        print(currentItem!)
         
-        
-        
-        let alertMessage = UIAlertController(title: "My Title", message: "My Message " + currentItem!, preferredStyle: .alert)
-        
-        
-        let image = currentCell.artworkImageView
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        action.setValue(image, forKey: "image")
-        alertMessage .addAction(action)
-        
-        self.present(alertMessage, animated: true, completion: nil)
+        let sb = UIStoryboard(name: "PopUp", bundle: nil)
+        let popup = sb.instantiateInitialViewController() as! PopUpViewController
+        popup.appData = apps?[(indexPath?.row)!]
+        self.present(popup, animated: true)
         
     }
     
     // When user starts searching for specific apps
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-
         if searchBar.text == nil || searchBar.text == "" {
             isSearching = false
             view.endEditing(true)
